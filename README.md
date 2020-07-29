@@ -46,7 +46,7 @@ Select the number of people bounded by your box.
 #### Controls
 Left Click on the number of people.
 
-If you would like to redraw the box, Right Click somewhere within the image.
+If you would like to redraw the box, Right Click anywhere on the window.
 
 #### Notes
 If you have done this correctly, you will see the following.
