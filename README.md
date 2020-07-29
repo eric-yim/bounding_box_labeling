@@ -8,7 +8,9 @@ This tool allows you to speedily and accurately label crowds.
 The output "all_boxes.txt" is a csv containing picture names, coordinates of boxes, and the estimated number of people contained in that box. We don't need to save the bounding box images, because they can be created programmatically through the output file and the picture names if needed.
 ### Controls
 Left Click: Create Bounding Box, Accept Bounding Box, Select Number of People
+
 Right Click: Reset Bounding Box
+
 Enter: Move on to Next Image
 
 ### Step 1: Create a bounding box
