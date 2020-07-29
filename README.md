@@ -6,6 +6,20 @@ Labeling crowds of people manually will greatly aid our ML algorithm in determin
 This tool allows you to speedily and accurately label crowds.
 
 The output "all_boxes.txt" is a csv containing picture names, coordinates of boxes, and the estimated number of people contained in that box. We don't need to save the bounding box images, because they can be created programmatically through the output file and the picture names if needed.
+### Start the program
+```
+python3 label_runthrough.py -d DIRECTORY
+```
+where DIRECTORY is the location of your images (do not put other files in the DIRECTORY).
+
+If you would like to start on a specific image (ordered alphabetically), run this
+```
+python3 label_runthrough.py -d DIRECTORY -s STARTING_IMAGE
+```
+where STARTING_IMAGE is the name of the image you're starting on. (e.g. 10599.png)
+
+STARTING_IMAGE must be the actual name of file, otherwise no starting point will be found.
+
 ### Controls
 Left Click: Create Bounding Box, Accept Bounding Box, Select Number of People
 
@@ -61,6 +75,8 @@ Do not manually type in any rows because there's a high likelihood of making err
 
 Repeat steps 1 and 2. Attempt to label some people in all regions of the screen. If it is hard to accurately access an area, it's OK to skip.
 ### Step 3: Move on to Next Image
-After you have repeated Step 1 and 2 for many boxes, move on to the next image by pressing Enter or Keyboard, while the Plot is your active window.
+After you have repeated Step 1 and 2 for many boxes, move on to the next image by pressing Enter or other Keyboard Key, while the main window is active.
+
+
 
 
