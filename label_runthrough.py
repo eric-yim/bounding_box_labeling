@@ -17,6 +17,8 @@ point_tl = None
 point_br = None
 on_number_pad = False
 write_path = 'all_boxes.txt'
+number_pad_path = 'temp_images/number_pad.png'
+temp_image_path = 'temp_images/temp.png'
 #============================
 def get_image(name):
 	img = cv2.cvtColor(cv2.imread(name),cv2.COLOR_BGR2RGB)
@@ -123,9 +125,9 @@ def gather_mini_image():
 # NUMBER PAD LABEL	
 def show_numberpad():
 	mini_image = gather_mini_image()
-	global my_image,on_number_pad
+	global my_image,on_number_pad,number_pad_path
 	on_number_pad = True
-	num_image = get_image('number_pad.png')
+	num_image = get_image(number_pad_path)
 	while mini_image.shape[0]> num_image.shape[0]:
 		h,w = mini_image.shape[:2]
 		mini_image = cv2.resize(mini_image,(w//2,h//2))
@@ -163,12 +165,12 @@ def numberize(recent_point):
 			return 9
 	return None
 def save_temp_img():
-	global my_image
+	global my_image,temp_image_path
 	img = cv2.cvtColor(my_image,cv2.COLOR_BGR2RGB)
-	cv2.imwrite('temp.png',img)
+	cv2.imwrite(temp_image_path,img)
 def load_temp_img():
-	global my_image
-	my_image = get_image('temp.png')
+	global my_image,temp_image_path
+	my_image = get_image(temp_image_path)
 	reset_tl_br()
 	remember_original()
 	redraw_image()
@@ -209,7 +211,7 @@ def write_label(num):
 	 global write_path
 	 global current_name
 	 global point_tl,point_br
-	 string = "{},{},{},{}".format(current_name,point_tl,point_br,num)
+	 string = "{};{};{};{}".format(current_name,point_tl,point_br,num)
 	 print("Added Row: {}".format(string))
 	 with open(write_path,'a') as f:
 		 f.write(string+'\n')

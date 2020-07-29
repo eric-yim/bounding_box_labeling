@@ -1,2 +1,9 @@
+### Label Groups of People
+![picture](sample/sample.png)
 
-![picture](https://user-images.githubusercontent.com/48815706/88741226-f4bed980-d0f3-11ea-8552-477bc24dac66.png)
+![picture](temp_images/number_pad.png)
+
+
+Top Left: (416, 522)
+Bottom Right: (459, 589)
+Added Row: shibuya02_10599.png;(416, 522);(459, 589);2
