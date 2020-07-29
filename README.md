@@ -25,9 +25,9 @@ Second, Left Click the BOTTOM RIGHT of bounding box.
 
 A bounding box should appear on the image.
 
-Third, if you are satisfied with the box, Left Click somewhere within the box.
+Third, if you are satisfied with the box, Left Click INSIDE the bounding box.
 
-If you want to redraw the box, Right Click somewhere within image.
+If you want to redraw the box, Right Click anywhere on the window.
 
 #### Notes
 
